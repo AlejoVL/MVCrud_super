@@ -1,0 +1,16 @@
+﻿@model ProductoViewModel
+
+@{
+    ViewData["Title"] = "Agregar Producto";
+}
+
+<h1>Agregar producto</h1>
+<h5 class="mb-3">Ingresa el nombre del producto:</h5>
+
+<form asp-controller="Producto" asp-action="Crear">
+    <div class="mb-3">
+        <label class="form-label">Ingresar nombre del producto</label>
+        <input type="text" class="form-control" asp-for="GsNombre" />        
+    </div>
+    <input type="submit" class="btn btn-primary" value="Enviar" />
+</form>

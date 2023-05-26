@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProductoViewModel>
+
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<h1>Crear producto</h1>
+<h5>Presiona el boton para agregar un producto a la lista</h5>
+
+<a class="btn btn-primary my-5" asp-action="Crear">Agregar producto</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre del producto</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var producto in Model)
+        {            
+            <tr>
+                <td>@producto.GsNombre</td>
+                <td>
+                    <input type="hidden" value="@producto.GsIdProducto" />
+                    <a class="btn btn-primary" asp-action="Editar" asp-route-id="@producto.GsIdProducto">Editar</a>
+                    <a class="btn btn-danger" asp-action="Borrar" asp-route-id="@producto.GsIdProducto">Eliminar</a>
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

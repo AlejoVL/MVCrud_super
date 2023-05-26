@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MVCrud_super.props" />
+</Project>

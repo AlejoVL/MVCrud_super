@@ -1,0 +1,16 @@
+﻿@model ProductoViewModel
+
+@{
+    ViewData["Title"] = "Borrar producto";
+}
+
+<div class="container mt-3">
+    <h3>¿Está seguro de que desea eliminar el producto @Model.GsNombre?</h3>
+
+    <form asp-controller="Producto" asp-action="Eliminar">
+        <input type="hidden" asp-for="GsIdProducto" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-primary">Cancelar</a>
+    </form>
+
+</div>

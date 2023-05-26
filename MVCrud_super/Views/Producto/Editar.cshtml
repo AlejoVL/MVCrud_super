@@ -1,0 +1,17 @@
+﻿@model ProductoViewModel
+
+@{
+    ViewData["Title"] = "Editar producto";
+}
+
+<h1>Editar producto</h1>
+
+<form asp-controller="Producto" asp-action="Editar">
+    <input type="hidden" asp-for="GsIdProducto" />
+    <div class="mb-3">
+        <label class="form-label">Ingresar nombre del producto</label>
+        <input type="text" class="form-control" asp-for="GsNombre" />        
+    </div>
+    <input type="submit" class="btn btn-primary" value="Actualizar" />
+    <a asp-action="Index" asp-controller="Libro" class="btn btn-secondary">Cancelar</a>
+</form>
